@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/to/Projects/linux/.git'
+let g:netrw_dirhist_2='/home/to/Downloads/26/shannon-bugreport-20161201-195625/perf'
+let g:netrw_dirhist_3='/home/to/Downloads/28/shannon-bugreport-20161201-200713/crash/127.0.0.1-2016-12-01-15:56:46'
+let g:netrw_dirhist_4='/home/to/Downloads/26/shannon-bugreport-20161201-195625/crash/127.0.0.1-2016-12-01-19:22:22'
