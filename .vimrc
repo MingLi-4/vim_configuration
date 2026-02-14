@@ -207,10 +207,6 @@ set clipboard+=unnamed
 
 set nobackup
 
-"make 运行
-
-:set makeprg=g++\ -Wall\ \ %
-
 "自动保存
 
 set autowrite
@@ -263,7 +259,7 @@ set cindent
 
 set tabstop=8
 
-" 统一缩进为4
+" 统一缩进为8
 
 set softtabstop=8
 
@@ -316,6 +312,10 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set langmenu=zh_CN.UTF-8
 
 set helplang=cn
+
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " 我的状态行显示的内容（包括文件类型和解码）
 
@@ -454,10 +454,6 @@ let Tlist_Compart_Format = 1    " 压缩方式
 let Tlist_File_Fold_Auto_Close = 0  " 不要关闭其他文件的tags  
 
 let Tlist_Enable_Fold_Column = 0    " 不要显示折叠树  
-
-autocmd FileType java set tags+=D:\tools\java\tags  
-
-"autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
 
 "设置tags  
 
